@@ -1,6 +1,7 @@
 const express = require("express");
 const db = require("./config/db");
 const cors = require("cors");
+require('dotenv').config();
 
 const { validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
@@ -74,7 +75,7 @@ app.post("/api/signup", async (req, res, next) => {
           try {
             token = jwt.sign(
               { userId: id_user, email: email, pseudo: pseudo },
-              "MySuperSecretKey",
+              process.env.SECRET_KEY,
               { expiresIn: "1h" }
             );
           } catch (err) {
@@ -147,7 +148,7 @@ app.post("/api/signin", async (req, res, next) => {
     try {
       token = jwt.sign(
         { userId: existingUser.id_user, email: existingUser.email },
-        "MySuperSecretKey",
+        process.env.SECRET_KEY,
         { expiresIn: "1h" }
       );
       //console.log("verifTok", token)
