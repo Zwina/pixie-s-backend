@@ -9,11 +9,11 @@ host: "sql11.freesqldatabase.com",
 // user: "root",
 // user: "sql11649784",
 // user: "sql11652518",
-user: "sql11657784",
+user: "sql11659757",
 // password: "",
 // password: "3KHbZMaqBG",
 // password: "MZwfUTYAvK",
-password: "2NxJNtHRgK",
+password: "XD8StdZdWE",
 database: process.env.URL_DATABASE
 })
 
