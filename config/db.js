@@ -5,15 +5,15 @@ const db = mysql.createConnection({
 // host: "localhost",
 // host: "sql11.freesqldatabase.com",
 // host: "sql11.freesqldatabase.com",
-host: "sql11.freesqldatabase.com",
+host: process.env.HOST,
 // user: "root",
 // user: "sql11649784",
 // user: "sql11652518",
-user: "sql11659757",
+user: process.env.USER,
 // password: "",
 // password: "3KHbZMaqBG",
 // password: "MZwfUTYAvK",
-password: "XD8StdZdWE",
+password: process.env.PASSWORD,
 database: process.env.URL_DATABASE
 })
 
